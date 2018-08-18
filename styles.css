@@ -9,7 +9,7 @@ ul, nav{
 }
 
 body{
-    font:normal 16px "arial", sans-serif;
+    font:normal 16px "Open Sans", sans-serif;
     color:#555;
     text-align: center;
 }
@@ -50,7 +50,7 @@ section p{
 section h3{
     color:#414A4F;
     text-transform: capitalize;
-    font:32px 'Arial', sans-serif;
+    font:32px 'Open Sans', sans-serif;
     margin-bottom:35px;
    /* text-align: center;*/
 }
@@ -62,7 +62,7 @@ section h3{
         padding:100px 50px;
     }
 }
-@madia(max-width:600px){
+@media(max-width:600px){
     section{
         padding:80px 30px;
     }
@@ -101,7 +101,7 @@ header nav li:last-child{
 margin-right: 0;
 }
 header h2{
-    font-family:0;
+    font-family:'Open Sans', serif;
 }
 @media(max-width:1000px){
     header{
@@ -116,6 +116,39 @@ header h2{
         margin-bottom: 15px;
     }
 }
+/*------------ABOUT----------*/
+.about{
+    background-color: #F7F7F7;
+}
+.about .grid li{
+    padding:0 30px;
+    flex-basis:33%;
+    text-align:center;
+}
+.about .grid li h4{
+    color:#2196F3;
+    font-size:20px;
+    margin-bottom: 25px;
+}
+.about .grid li p{
+    margin:0;
+}
+@media(max-width:1000px){
+    .about .grid li{
+        flex-basis: 100%; 
+        margin-bottom:65px;
+    }
+    .about .grid li:last-child{
+        margin-bottom:0px;
+    }
+}
+@media(max-width:600px){
+    .about .grid li{
+       flex-basis: 100%; 
+    }
+    
+}
+
 /*------------HERO----------*/
 .hero{
     background-color: transparent;
@@ -146,13 +179,13 @@ header h2{
     opacity:0.75;
   }
   .hero h1{
-      font:bold 60px 'Georgia',serif;
+      font:bold 60px 'Henny Penny',serif;
       font-size: 90px;
       text-shadow:3px 3px #000;
       margin-bottom:15px;
   }
   .hero h3{
-      font:normal 28px 'Arial', sans-serif;
+      font:normal 28px 'Open Sans', sans-serif;
       margin-bottom:40px;
       color:aliceblue;
   }
@@ -167,6 +200,48 @@ header h2{
           font-size:24px;
       }
   }
+/*------------ILLUSTRATIONS----------*/
+.illustrations{
+    background-color: #FFF;
+}
+.illustrations .grid li{
+    padding:20px;
+    height: 350px;
+    border-radius:3px;
+
+    background-clip: content-box;
+    background-size: cover;
+    background-position: center;
+    background-color: #333;
+}
+.illustrations .grid li.small{
+    flex-basis:40%;
+}
+.illustrations .grid li.large{
+    flex-basis:60%;
+}
+@media(max-width:1000px){
+    .illustrations .grid li.small, .illustrations.grid li.large{
+        flex-basis:100%;
+    }
+}
+/*------------CHAPTER 1----------*/
+.chap1{
+    background-color: #F7F7F7;
+    margin-top:0;
+}
+.chap1 p{
+    text-align:left;
+}
+.chap1 .song{
+    text-align: center;
+    width: 80%;
+    font-size: 28px;
+    font-weight: 300;
+    line-height: 1.25;
+    padding:0;
+}
+
 
 /*------------FOOTER----------*/
 footer{
