@@ -36,10 +36,13 @@ hr{
 section{
     background-color: #fff;
     padding:125px 100px;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
 }
 section p{
     max-width:800px;
-    text-align: center;
+    /*text-align: center;*/
     margin-bottom: 35px;
     padding:0 20px;
     line-height: 2;
@@ -49,7 +52,157 @@ section h3{
     text-transform: capitalize;
     font:32px 'Arial', sans-serif;
     margin-bottom:35px;
+   /* text-align: center;*/
 }
 .smallerheadline{
     font-size:75%;
+}
+@media(max-width:1000px){
+    section{
+        padding:100px 50px;
+    }
+}
+@madia(max-width:600px){
+    section{
+        padding:80px 30px;
+    }
+}
+ul.grid{
+    width:100%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+/*------------HEADER----------*/
+header{
+    background-color: rgba(0,0,0,.7);
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:10;
+    align-items: center;
+    color:#fff;
+    padding:35px 100px 20px;
+    display:flex;
+    justify-content: space-around;
+}
+
+header nav{
+    display: flex;
+}
+header nav li{
+    margin:0 15px;
+}
+header nav li:first-child{
+    margin-left:0;
+}
+header nav li:last-child{
+margin-right: 0;
+}
+header h2{
+    font-family:0;
+}
+@media(max-width:1000px){
+    header{
+        padding: 20px 50px;
+    }
+}
+@media(max-width:700px){
+    header{
+        flex-direction:column;
+    }
+    header h2{
+        margin-bottom: 15px;
+    }
+}
+/*------------HERO----------*/
+.hero{
+    background-color: transparent;
+    position:relative;
+    justify-content: center;
+    min-height:100vh;
+    color:#fff;
+    text-align:center;
+}
+.hero .background-image{
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height: 100%;
+  z-index:-1;
+  background-size:cover;
+  background-color:#1A77C1;  
+}
+.hero .background-image::after{
+    content:'';
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    background-color:#1A77C1;  
+    opacity:0.75;
+  }
+  .hero h1{
+      font:bold 60px 'Georgia',serif;
+      font-size: 90px;
+      text-shadow:3px 3px #000;
+      margin-bottom:15px;
+  }
+  .hero h3{
+      font:normal 28px 'Arial', sans-serif;
+      margin-bottom:40px;
+      color:aliceblue;
+  }
+  @media(max-width:800px){
+      .hero{
+          min-height: 600px;
+      }
+      .hero h1{
+          font-size:48px;
+      }
+      .hero h3{
+          font-size:24px;
+      }
+  }
+
+/*------------FOOTER----------*/
+footer{
+    display:flex;
+    flex-direction: column;
+    background-color:#444;
+    color:#fff;
+    padding: 60px 0;
+    text-align: center;
+    align-items: center;
+}
+footer ul{
+    display:flex;
+    margin-bottom: 25px;
+    font-size:16px;
+}
+footer ul li{
+    margin:0 8px;
+}
+footer ul li:first-child{
+    margin-left: 0;
+}
+footer ul li:last-child{
+    margin-right: 0;
+}
+footer p{
+    text-transform: uppercase;
+    font-size: 14px;
+    color:rgba(255,255,255,.6);
+    margin-bottom: 10px;
+}
+footer p a{
+    color:#fff;
+}
+@media(max-width:700px){
+    footer{
+        padding:80px 15px;
+    }
 }
